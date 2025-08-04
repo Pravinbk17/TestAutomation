@@ -1,16 +1,11 @@
 package POM;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import Utility.Driver;
 
 public class MakerChecker extends Driver
@@ -29,13 +24,17 @@ public class MakerChecker extends Driver
 		
 	}
 	
-	 public void SelectMakers() throws InterruptedException 
+	 public MakerChecker(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void SelectMakers() throws InterruptedException 
 	 {
 		 AD.click();
 		 MakerChecker.click();
 		 Thread.sleep(5000);	
 		
-		 Utility.PerformActions.clickWithJavascript(SelectMaker);
+		 Utility.PerformActions.clickWithJavascript(driver, SelectMaker);
 		 
 //		 if (!(SelectMaker.isSelected()))
 //		 {  			 		 
@@ -44,7 +43,7 @@ public class MakerChecker extends Driver
 //		 }
 //		 JavascriptExecutor js = (JavascriptExecutor) driver;
 //		 js.executeScript("arguments[0].click();", save);
-		 Utility.PerformActions.clickWithJavascript(save);
+		 Utility.PerformActions.clickWithJavascript(driver, save);
 		 //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		 Thread.sleep(5000);
 		 close.click();

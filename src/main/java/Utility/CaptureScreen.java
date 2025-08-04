@@ -12,6 +12,10 @@ public class CaptureScreen
 {
 	public static WebDriver driver;
 
+	public CaptureScreen(WebDriver driver2) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void CapsScreen() throws IOException
 	{
 		File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);

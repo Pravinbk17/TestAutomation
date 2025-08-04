@@ -1,5 +1,6 @@
 package POM;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -30,21 +31,25 @@ public class RoleBase extends Driver
 		
 	}
 	
+	public RoleBase(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void RoleBased() throws InterruptedException 
 	{
-		Utility.PerformActions.clickWithJavascript(AD);
-		Utility.PerformActions.clickWithJavascript(Role);Thread.sleep(3000);
-		Utility.PerformActions.clickWithJavascript(New);Thread.sleep(3000);
-		Utility.PerformActions.clickWithJavascript(UserRole);Thread.sleep(3000);
+		Utility.PerformActions.clickWithJavascript(driver, AD);
+		Utility.PerformActions.clickWithJavascript(driver, Role);Thread.sleep(3000);
+		Utility.PerformActions.clickWithJavascript(driver, New);Thread.sleep(3000);
+		Utility.PerformActions.clickWithJavascript(driver, UserRole);Thread.sleep(3000);
 //		UserRole.sendKeys("TEACHER");
-		Utility.PerformActions.clickWithJavascript(Teacher);Thread.sleep(2000);
-		Utility.PerformActions.clickWithJavascript(User);Thread.sleep(2000);
-		Utility.PerformActions.clickWithJavascript(SchProfile);Thread.sleep(2000);
-		Utility.PerformActions.clickWithJavascript(SchApp);
+		Utility.PerformActions.clickWithJavascript(driver, Teacher);Thread.sleep(2000);
+		Utility.PerformActions.clickWithJavascript(driver, User);Thread.sleep(2000);
+		Utility.PerformActions.clickWithJavascript(driver, SchProfile);Thread.sleep(2000);
+		Utility.PerformActions.clickWithJavascript(driver, SchApp);
 				
 		Thread.sleep(3000);
-		Utility.PerformActions.clickWithJavascript(Save);Thread.sleep(1500);
-		Utility.PerformActions.clickWithJavascript(Close);
+		Utility.PerformActions.clickWithJavascript(driver, Save);Thread.sleep(1500);
+		Utility.PerformActions.clickWithJavascript(driver, Close);
 		
 	}
 }

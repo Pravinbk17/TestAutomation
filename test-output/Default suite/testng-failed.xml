@@ -5,8 +5,9 @@
     <classes>
       <class name="Test.TestClass">
         <methods>
+          <include name="NewUser"/>
+          <include name="setupDriver"/>
           <include name="ApplyImplicitwait"/>
-          <include name="SchoolProfile"/>
           <include name="SOut"/>
           <include name="launchBrowser"/>
         </methods>

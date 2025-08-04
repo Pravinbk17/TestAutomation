@@ -26,11 +26,11 @@ public class ForgetPass extends Driver
 	
 	public void Forget() throws InterruptedException 
 	{
-		Utility.PerformActions.clickWithJavascript(FPass);
+		Utility.PerformActions.clickWithJavascript(driver, FPass);
 		LoginEn.sendKeys("S2501001_1");Thread.sleep(3000);
-		Utility.PerformActions.clickWithJavascript(OTPRequest);Thread.sleep(1500);// Enter OTP Manually(we can't automate Otp functionality)
-		Utility.PerformActions.clickWithJavascript(VerifyOtp);
-		Utility.PerformActions.clickWithJavascript(BackLogin);
+		Utility.PerformActions.clickWithJavascript(driver, OTPRequest);Thread.sleep(1500);// Enter OTP Manually(we can't automate Otp functionality)
+		Utility.PerformActions.clickWithJavascript(driver, VerifyOtp);
+		Utility.PerformActions.clickWithJavascript(driver, BackLogin);
 		
 	}
 }

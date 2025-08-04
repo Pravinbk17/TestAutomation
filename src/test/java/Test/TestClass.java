@@ -8,15 +8,16 @@ import Base.base1;
 
 public class TestClass extends base1
 {
-//	@Test (priority = 1)
-//	public void Login() throws InterruptedException, IOException 
-//	{
-//	 login.LoginCase();	
+	@Test (priority = 1)
+	public void Login() throws InterruptedException, IOException 
+	{
+		driver.get("http://27.107.130.31:24601");
+	 login.LoginCase();	
 //	 login.Negative();
 //	 
 //	 TakeSnap.CapsScreen();
 //	 
-//	}
+	}
 //	@Test (priority = 2)
 //	public void RolePermission() throws InterruptedException 
 //	{
@@ -24,13 +25,13 @@ public class TestClass extends base1
 //		RolePermission.RoleBased();
 //	}
 //	 
-//	@Test(priority = 2)
-//	public void NewUser() throws InterruptedException
-//	{
-//		 NewUser.AddNewUser();
-//		 NewUser.Info();
-//		 NewUser.UserDetails();
-//	}
+	@Test(priority = 2)
+	public void NewUser() throws InterruptedException
+	{
+		 NewUser.AddNewUser();
+		 NewUser.Info();
+		 NewUser.UserDetails();
+	}
 //	
 //	@Test (priority = 3)
 //	public void SelectMaker() throws InterruptedException  
@@ -38,14 +39,15 @@ public class TestClass extends base1
 //		SelectMaker.SelectMakers();
 //	}
 //	
-	@Test (priority = 2)
-	public void SchoolProfile() throws InterruptedException 
-	{
-		SchoolInfo.NewSchReg();
-		 SchoolInfo.SchoolDetails();
+//	@Test (priority = 2)
+//	public void SchoolProfile() throws InterruptedException 
+//	{
+//		SchoolInfo.NewSchReg();
+//		 SchoolInfo.SchoolDetails();
 //		 SchoolInfo.Edit();
 //		 SchoolInfo.SansthaDetails();
 //		 SchoolInfo.OtherDetails();
-	}
+//	}
 
 }
+

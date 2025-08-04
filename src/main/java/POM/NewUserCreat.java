@@ -1,6 +1,6 @@
 package POM;
 
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,7 +9,7 @@ import Utility.Driver;
 
 public class NewUserCreat extends Driver
 {
-	@FindBy (xpath="//span[text()='Admin']") public WebElement AD;
+	@FindBy (xpath="//span[text()=' Masters ']") public WebElement AD;
 	@FindBy (xpath="//a[contains (@href, 'user')]") public WebElement User;
 	@FindBy (xpath="//b[text ()= 'Add New User']") public WebElement AddNewUser;
 	
@@ -36,6 +36,9 @@ public class NewUserCreat extends Driver
 		PageFactory.initElements(driver, this);
 		
 	}
+		public NewUserCreat(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+	}
 		public void AddNewUser() throws InterruptedException 
 	{
 		AD.click();
@@ -54,7 +57,7 @@ public class NewUserCreat extends Driver
 		SN.click(); 
 		search.sendKeys("New English School Shivani");
 		Thread.sleep(5000);
-		Utility.PerformActions.clickWithJavascript(SelectSchool);//UES.click();Thread.sleep(1500);
+		Utility.PerformActions.clickWithJavascript(driver, SelectSchool);//UES.click();Thread.sleep(1500);
 				
 		
 	}
@@ -72,7 +75,7 @@ public class NewUserCreat extends Driver
 		   //Utility.PerformActions.clickWithJavascript(save);
 	   		Thread.sleep(5000);
 //	   		js.executeScript("arguments[0].click();", closeSymbol);
-	   		Utility.PerformActions.clickWithJavascript(closeSymbol);
+	   		Utility.PerformActions.clickWithJavascript(driver, closeSymbol);
 		    
 	   }
 	

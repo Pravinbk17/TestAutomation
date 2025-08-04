@@ -10,7 +10,7 @@ public class Driver
 
 	public static void UseDriver() 
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Desktop\\Automation files\\chromedriver-win64\\chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Desktop\\Automation files\\chromedriver-win64\\chromedriver.exe");
 		driver= new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
